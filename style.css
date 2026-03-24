@@ -1,3 +1,13 @@
+:root {
+  --neutral-900: #162542;
+  --neutral-400: #5D6D8F;
+  --neutral-200: #E8EFF2;
+  --neutral-0: #FFFFFF;
+
+  --orange-500: #F16718;
+  --orange-300: #FF9B62;
+}
+
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
@@ -120,3 +130,8 @@ h6 {
 /* .grid-content {
 	grid-column: 2 / 3;
 } */
+
+.button {
+  border: 0;
+  padding:
+}
