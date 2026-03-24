@@ -1,0 +1,122 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+	margin: 0;
+}
+
+/* 3. Enable keyword animations */
+/* @media (prefers-reduced-motion: no-preference) {
+	html {
+		interpolate-size: allow-keywords;
+	}
+} */
+
+body {
+	/* 4. Increase line-height */
+	line-height: 1;
+	/* 5. Improve text rendering */
+	/* -webkit-font-smoothing: antialiased; */
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 8. Avoid text overflows */
+/* p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+} */
+
+/* 9. Improve line wrapping */
+/* p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+} */
+
+/*
+  10. Create a root stacking context
+*/
+/* #root,
+#__next {
+	isolation: isolate;
+} */
+
+.topnav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  grid-column: 2 / -2;
+}
+
+.grid-main {
+	display: grid;
+	grid-template-columns:
+		/*1fr*/
+		/* 1. Attempt: The page should
+          take up minimum either 100%
+          or 50rem */
+		/* min(100%, 50rem) */
+
+		/* 2. Attempt: The page should
+          take up at least either 100%
+          minus the left and right
+          padding (each 24px) */
+		/* min(100% - 48px, 50rem) */
+
+		/* 3. Attempt: Same without a default minimum of 50rem */
+		/* calc(100% - 48px) */
+
+		/* 4. Attempt: The page should
+          take 100% minus the left and right
+          paddings (each 24px)
+          and should be divided by 3
+          to get three equal columns. */
+		/*repeat(3, calc((100% - 48px) / 3))*/
+		/*1fr;*/
+
+    /* Last Attempt to get equal columns
+       with gaps and paddings. The gaps of 20px
+       will be subtracted twice to get equal paddings on each side */
+    4px
+    repeat(3, calc((100% - 48px - 20px * 2) / 3))
+    4px;
+    gap: 20px;
+}
+
+/* .grid-content {
+	grid-column: 2 / 3;
+} */
