@@ -1,11 +1,44 @@
 :root {
-  --neutral-900: #162542;
-  --neutral-400: #5D6D8F;
-  --neutral-200: #E8EFF2;
-  --neutral-0: #FFFFFF;
+	--neutral-900: #162542;
+	--neutral-400: #5d6d8f;
+	--neutral-200: #e8eff2;
+	--neutral-0: #ffffff;
 
-  --orange-500: #F16718;
-  --orange-300: #FF9B62;
+	--orange-500: #f16718;
+	--orange-300: #ff9b62;
+}
+
+/* barlow-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Barlow";
+	font-style: normal;
+	font-weight: 400;
+	src: url("assets/fonts/barlow-v13-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-500 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Barlow";
+	font-style: normal;
+	font-weight: 500;
+	src: url("assets/fonts/barlow-v13-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Barlow";
+	font-style: normal;
+	font-weight: 700;
+	src: url("assets/fonts/barlow-v13-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* barlow-900 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Barlow";
+	font-style: normal;
+	font-weight: 900;
+	src: url("assets/fonts/barlow-v13-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -28,6 +61,7 @@
 } */
 
 body {
+  font-family: "Barlow", Arial, Helvetica, sans-serif;
 	/* 4. Increase line-height */
 	line-height: 1;
 	/* 5. Improve text rendering */
@@ -89,42 +123,42 @@ h6 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-  grid-column: 2 / -2;
+	grid-column: 2 / -2;
 }
 
 .grid-main {
 	display: grid;
-	grid-template-columns:
-		/*1fr*/
-		/* 1. Attempt: The page should
+	/*1fr*/
+	/* 1. Attempt: The page should
           take up minimum either 100%
           or 50rem */
-		/* min(100%, 50rem) */
+	/* min(100%, 50rem) */
 
-		/* 2. Attempt: The page should
+	/* 2. Attempt: The page should
           take up at least either 100%
           minus the left and right
           padding (each 24px) */
-		/* min(100% - 48px, 50rem) */
+	/* min(100% - 48px, 50rem) */
 
-		/* 3. Attempt: Same without a default minimum of 50rem */
-		/* calc(100% - 48px) */
+	/* 3. Attempt: Same without a default minimum of 50rem */
+	/* calc(100% - 48px) */
 
-		/* 4. Attempt: The page should
+	/* 4. Attempt: The page should
           take 100% minus the left and right
           paddings (each 24px)
           and should be divided by 3
           to get three equal columns. */
-		/*repeat(3, calc((100% - 48px) / 3))*/
-		/*1fr;*/
+	/*repeat(3, calc((100% - 48px) / 3))*/
+	/*1fr;*/
 
-    /* Last Attempt to get equal columns
+	/* Last Attempt to get equal columns
        with gaps and paddings. The gaps of 20px
        will be subtracted twice to get equal paddings on each side */
-    4px
-    repeat(3, calc((100% - 48px - 20px * 2) / 3))
-    4px;
-    gap: 20px;
+	grid-template-columns:
+		4px
+		repeat(3, calc((100% - 48px - 20px * 2) / 3))
+		4px;
+	gap: 20px;
 }
 
 /* .grid-content {
@@ -132,6 +166,6 @@ h6 {
 } */
 
 .button {
-  border: 0;
-  padding:
+	border: 0;
+	padding: ;
 }
